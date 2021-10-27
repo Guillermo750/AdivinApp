@@ -55,19 +55,22 @@ public class AdivinaApp extends Application {
 		} else if (numeros > aleatorio) {
 			Alert alert = new Alert(Alert.AlertType.WARNING);
 			alert.setHeaderText("¡Has fallado!");
-			alert.setContentText("El número a adivinar es menor que " + numeros + "." + "Vuelve a intentarlo.");
+			alert.setContentText("El número a adivinar es menor que " + numeros);
+			alert.setContentText("Vuelve a intentarlo.");
 			alert.showAndWait();
 			intentos++;
 		} else if (numeros < aleatorio) {
 			Alert alert = new Alert(Alert.AlertType.WARNING);
 			alert.setHeaderText("¡Has fallado!");
-			alert.setContentText("El número a adivinar es mayor que " + numeros + "." + "Vuelve a intentarlo.");
+			alert.setContentText("El número a adivinar es mayor que " + numeros);
+			alert.setContentText("Vuelve a intentarlo.");
 			alert.showAndWait();
 			intentos++;
 		} else if (numeros == aleatorio) {
 			Alert alert = new Alert(Alert.AlertType.INFORMATION);
 			alert.setHeaderText("¡Has ganado!");
-			alert.setContentText("Sólo has necesitado " + intentos + " intentos." + "Vuelve a jugar y hazlo mejor");
+			alert.setContentText("Sólo has necesitado " + intentos + " intentos");
+			alert.setContentText("Vuelve a jugar y hazlo mejor");
 			alert.showAndWait();
 		}else{
 			Alert alert = new Alert(Alert.AlertType.ERROR);
